@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="52" role="img" aria-label="Coming soon to Chrome Web Store">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2431"/>
+      <stop offset="1" stop-color="#0f141c"/>
+    </linearGradient>
+  </defs>
+  <rect width="270" height="52" rx="12" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="269" height="51" rx="11.5" fill="none" stroke="#3a4657"/>
+  <g transform="translate(30,26)">
+    <path d="M0 0 L-11.3 -6.5 A13 13 0 0 1 11.3 -6.5 Z" fill="#EA4335"/>
+    <path d="M0 0 L-11.3 -6.5 A13 13 0 0 0 0 13 Z" fill="#34A853"/>
+    <path d="M0 0 L0 13 A13 13 0 0 0 11.3 -6.5 Z" fill="#FBBC05"/>
+    <circle r="5.8" fill="#fff"/>
+    <circle r="4.4" fill="#4285F4"/>
+  </g>
+  <text x="56" y="22" font-family="Segoe UI, Verdana, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#fbbf24">COMING SOON TO</text>
+  <text x="56" y="40" font-family="Segoe UI, Verdana, sans-serif" font-size="15.5" font-weight="600" fill="#f1f5f9">Chrome Web Store</text>
+</svg>
