@@ -41,7 +41,7 @@
 | :---: | :---: |
 | ![](assets/screenshot-1.png) | ![](assets/screenshot-2.png) |
 
-| Compare files | Markdown + Mermaid | Mermaid file |
+| Compare files | Markdown | Mermaid file |
 | :---: | :---: | :---: |
 | ![](assets/screenshot-3.png) | ![](assets/screenshot-4.png) | ![](assets/screenshot-5.png) |
 
@@ -169,7 +169,7 @@ $ how-to-install
 
 - `.ts` files may open as a media player — Chrome maps `.ts` to `video/mp2t` before any
   extension can act. Rename to `.mts` / `.tsx` if it bites you.
-- Terraform (`.tf`) renders as plain text — no CodeMirror grammar exists for HCL.
+- Terraform (`.tf`) renders as plain text — no HCL grammar is available.
 - Files over 10 MB fall back to the browser's native view.
 
 <br>
