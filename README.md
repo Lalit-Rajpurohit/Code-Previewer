@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.png" width="100%" alt="Code Previewer — code view, compare files, markdown preview">
+<img src="assets/banner.png" width="100%" alt="Code Previewer — code view, folder view, compare files, markdown preview">
 
 <br><br>
 
@@ -12,36 +12,36 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Offline](https://img.shields.io/badge/100%25-OFFLINE-4ade80?style=for-the-badge)
 
-![Version](https://img.shields.io/badge/v1.10.2-8b5cf6?style=flat-square&label=version)
-![Size](https://img.shields.io/badge/bundle-~360kb_gz-0ea5e9?style=flat-square)
+![Version](https://img.shields.io/badge/v1.13.1-8b5cf6?style=flat-square&label=version)
+![Languages](https://img.shields.io/badge/25%2B-languages-0ea5e9?style=flat-square)
 ![Privacy](https://img.shields.io/badge/telemetry-none-22c55e?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)
 
 <br>
 
-[![Chrome Web Store — Coming Soon](assets/badge-chrome.svg)](#-store-listings)
+[![Available on the Chrome Web Store](assets/badge-chrome.svg)](https://chromewebstore.google.com/detail/code-previewer/jpmbjliabobhdapdnhpdhiehdfleddjg)
 &nbsp;&nbsp;&nbsp;
-[![Edge Add-ons — Coming Soon](assets/badge-edge.svg)](#-store-listings)
+[![Available on Microsoft Edge Add-ons](assets/badge-edge.svg)](https://microsoftedge.microsoft.com/addons/detail/code-previewer/kjelmbmjipkbncoclckieombhjgjpeei)
 
 **🌐 [lalit-rajpurohit.github.io/Code-Previewer](https://lalit-rajpurohit.github.io/Code-Previewer/)**
 
-<br><br>
+<br>
 
-<img src="assets/typing-demo.svg" width="640" alt="Live typing demo — code renders itself">
+<img src="assets/demo.gif" width="860" alt="Code Previewer demo — folder view, themes, markdown preview, mermaid diagrams and file compare">
 
 </div>
 
-<br>
+---
 
 ## 📸 Screenshots
 
 <div align="center">
 
-| One Dark · Python | Compare mode · Java |
+| Code view · Python | Folder view |
 | :---: | :---: |
 | ![](assets/screenshot-1.png) | ![](assets/screenshot-2.png) |
 
-| Markdown preview | Search · JavaScript | Dracula · JSON |
+| Compare files | Markdown + Mermaid | Mermaid file |
 | :---: | :---: | :---: |
 | ![](assets/screenshot-3.png) | ![](assets/screenshot-4.png) | ![](assets/screenshot-5.png) |
 
@@ -53,13 +53,18 @@
 $ code-previewer --features
 
   ✓ syntax highlighting ....... 25+ languages, VS Code-grade colors
-  ✓ themes .................... ☀ Light · 🌙 One Dark · ☁ GitHub Light · 🧛 Dracula
+  ✓ folder view ............... browse folders as a grid — badges, filter,
+                                sort, breadcrumbs, keyboard navigation
   ✓ compare mode .............. side-by-side diff of any two files
-  ✓ markdown preview .......... live split view · draggable divider · tables
+  ✓ markdown preview .......... split / preview-only / source-only,
+                                with highlighted code blocks
+  ✓ mermaid diagrams .......... .mmd / .mermaid files and ```mermaid blocks
+  ✓ themes .................... ☀ Light · 🌙 One Dark · ☁ GitHub Light · 🧛 Dracula
   ✓ search .................... Ctrl+F panel — regex, match case, by word
   ✓ editor extras ............. line numbers · code folding · word wrap
-  ✓ file actions .............. copy · download · reload from disk · fullscreen
-  ✓ privacy ................... zero network calls — files never leave your machine
+  ✓ file actions .............. copy · download · reload · fullscreen · back
+  ✓ privacy ................... zero network calls — files never leave
+                                your machine
 
 $ _
 ```
@@ -71,11 +76,30 @@ $ _
 │  Python      │  JavaScript  │  TypeScript  │  JSON        │  YAML        │
 │  HTML        │  CSS         │  Java        │  Go          │  Rust        │
 │  C / C++     │  SQL         │  XML / SVG   │  Markdown    │  Shell       │
-│  Dockerfile  │  TOML        │  INI / .env  │  CSV / logs  │  + more...   │
+│  Dockerfile  │  Mermaid     │  Terraform   │  TOML / INI  │  + more...   │
 ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
 ```
 
 > Unknown-but-texty extensions fall back to a clean plain-text view — so *any* code file opens.
+
+## 📁 Folder view
+
+Open a **directory** instead of a file — `file:///C:/projects/` — and the bare Chrome listing
+becomes a proper file browser:
+
+- Grid of files and sub-folders with **language badges** and type icons
+- **Filter** box, **A→Z / Z→A** sort, clickable **breadcrumbs**
+- **Keyboard navigation** — type to filter, arrows to move, <kbd>Enter</kbd> to open,
+  <kbd>Backspace</kbd> to go up
+- Optional **"Enable folder access"** (standard File System Access API, one click):
+  preview files in a side pane and **compare any two** with checkboxes
+
+## 🧜 Mermaid diagrams
+
+- `.mmd` and `.mermaid` files render as diagrams, with the source alongside
+- ` ```mermaid ` blocks inside Markdown render inline in the preview
+- Diagrams follow the active theme — light and dark both look right
+- A syntax error shows the message in place instead of breaking the page
 
 ## 🎨 Themes
 
@@ -93,11 +117,15 @@ One click cycles through all four — your pick is remembered across sessions.
 ```console
 $ how-to-install
 
-  [1] Get it from the Chrome Web Store or Edge Add-ons  ──▶  buttons above ☝
+  [1] Chrome  →  https://chromewebstore.google.com/detail/code-previewer/jpmbjliabobhdapdnhpdhiehdfleddjg
+      Edge    →  https://microsoftedge.microsoft.com/addons/detail/code-previewer/kjelmbmjipkbncoclckieombhjgjpeei
+
   [2] Extension Details → ✓ "Allow access to file URLs"     (one-time, required)
-  [3] Open any local file:
+
+  [3] Open any local file or folder:
 
       file:///C:/projects/main.py        ← boom. syntax highlighted.
+      file:///C:/projects/               ← folder view
 ```
 
 ## ⌨️ Shortcuts
@@ -109,6 +137,7 @@ $ how-to-install
 | <kbd>Alt</kbd> + <kbd>Z</kbd> | Toggle word wrap — in compare mode, only the pane your cursor is in |
 | <kbd>Esc</kbd> | Close search panel |
 | <kbd>▸</kbd> gutter click | Fold / unfold a code block |
+| *In folder view* | type to filter · <kbd>←↑↓→</kbd> move · <kbd>Enter</kbd> open · <kbd>Backspace</kbd> up |
 
 ## 🔒 Privacy
 
@@ -126,16 +155,22 @@ $ how-to-install
 - [x] Syntax highlighting — 25+ languages
 - [x] 4 themes with persistence
 - [x] Side-by-side compare mode with per-pane word wrap
-- [x] Markdown preview with resizable split & tables
+- [x] Markdown preview — split / preview-only / source-only
 - [x] Search, folding, copy, download, reload, fullscreen
-- [ ] 🚧 Chrome Web Store listing — **in review**
-- [ ] 🚧 Edge Add-ons listing — **in review**
+- [x] **Published on the Chrome Web Store**
+- [x] **Published on Microsoft Edge Add-ons**
+- [x] Folder view with grid, filter, sort and keyboard navigation
+- [x] Mermaid diagram rendering
+- [x] Syntax-highlighted code blocks in the markdown preview
 - [ ] Minimap
 - [ ] More themes
 
-## 🚧 Store listings
+## ⚠️ Known limitations
 
-> **Coming soon!** ⏳ The extension is currently **in review** on the **Chrome Web Store** and **Microsoft Edge Add-ons**. The buttons at the top go live the moment review completes — watch this repo to get notified.
+- `.ts` files may open as a media player — Chrome maps `.ts` to `video/mp2t` before any
+  extension can act. Rename to `.mts` / `.tsx` if it bites you.
+- Terraform (`.tf`) renders as plain text — no CodeMirror grammar exists for HCL.
+- Files over 10 MB fall back to the browser's native view.
 
 <br>
 
@@ -143,7 +178,7 @@ $ how-to-install
 
 <div align="center">
 
-**If this looks useful, drop a ⭐ — it genuinely helps.**
+**If this is useful, drop a ⭐ — it genuinely helps.**
 
 <sub>`Rendered by Code Previewer` · MIT License · <a href="https://lalit-rajpurohit.github.io/Code-Previewer/">live site</a></sub>
 

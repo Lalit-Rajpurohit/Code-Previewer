@@ -71,7 +71,9 @@
   .badges a:hover img { transform: translateY(-3px); }
   .review { margin-top: 14px; font-family: var(--mono); font-size: 12.5px; color: var(--amber); }
   .review::before { content: "● "; animation: pulse 1.6s infinite; }
+  .review.live { color: var(--green); }
   @keyframes pulse { 50% { opacity: .3; } }
+  .demo-wrap.wide { max-width: 880px; }
 
   /* window chrome — identical to promo cards */
   .win { background: var(--win); border: 1.5px solid var(--line); box-shadow: 8px 12px 0 rgba(0,0,0,.45); }
@@ -153,20 +155,20 @@
     </div>
     <p class="sub">view local code files — right in your browser</p>
     <div class="badges">
-      <a href="https://github.com/Lalit-Rajpurohit/Code-Previewer"><img src="assets/badge-chrome.svg" alt="Coming soon to Chrome Web Store"></a>
-      <a href="https://github.com/Lalit-Rajpurohit/Code-Previewer"><img src="assets/badge-edge.svg" alt="Coming soon to Microsoft Edge Add-ons"></a>
+      <a href="https://chromewebstore.google.com/detail/code-previewer/jpmbjliabobhdapdnhpdhiehdfleddjg"><img src="assets/badge-chrome.svg" alt="Available on the Chrome Web Store"></a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/code-previewer/kjelmbmjipkbncoclckieombhjgjpeei"><img src="assets/badge-edge.svg" alt="Available on Microsoft Edge Add-ons"></a>
     </div>
-    <p class="review">in review — chrome web store &amp; edge add-ons</p>
+    <p class="review live">free &middot; fully offline &middot; no data collected</p>
   </div>
 
-  <div class="demo-wrap">
-    <img src="assets/typing-demo.svg" alt="Animated demo — a Python file rendering itself with syntax highlighting">
+  <div class="demo-wrap wide">
+    <img src="assets/demo.gif" alt="Demo — folder view, themes, markdown preview, mermaid diagrams and file compare">
   </div>
 
   <!-- features -->
   <div class="cap">
     <h2>Everything a code viewer should have</h2>
-    <p>// and nothing it shouldn't</p>
+    <p>// and nothing it shouldn't &middot; v1.13.1</p>
   </div>
   <div class="grid">
     <div class="win">
@@ -174,12 +176,20 @@
       <div class="win-body"><b>Syntax highlighting</b> for 25+ languages with VS Code-grade colors. Unknown files fall back to clean plain text.</div>
     </div>
     <div class="win">
+      <div class="win-head"><i></i><i></i><i></i><span class="t">folder/</span></div>
+      <div class="win-body"><b>Folder view</b> — open a directory and browse it as a grid, with language badges, filter, sort, breadcrumbs and keyboard navigation.</div>
+    </div>
+    <div class="win">
       <div class="win-head"><i></i><i></i><i></i><span class="t">compare.diff</span></div>
       <div class="win-body"><b>Compare mode</b> — side-by-side diff of any two files, additions green, removals red, per-pane word wrap.</div>
     </div>
     <div class="win">
       <div class="win-head"><i></i><i></i><i></i><span class="t">preview.md</span></div>
-      <div class="win-body"><b>Markdown preview</b> — live split view with a draggable divider. Tables, images, code blocks.</div>
+      <div class="win-body"><b>Markdown preview</b> — split, preview-only or source-only, with syntax-highlighted code blocks and a draggable divider.</div>
+    </div>
+    <div class="win">
+      <div class="win-head"><i></i><i></i><i></i><span class="t">flow.mmd</span></div>
+      <div class="win-body"><b>Mermaid diagrams</b> — .mmd files and mermaid blocks inside Markdown render as real diagrams, in your theme.</div>
     </div>
     <div class="win">
       <div class="win-head"><i></i><i></i><i></i><span class="t">themes.json</span></div>
@@ -202,24 +212,30 @@
   </div>
   <div class="shot win">
     <div class="win-head"><i></i><i></i><i></i><span class="addr">file:///C:/samples/showcase.py</span></div>
-    <img src="assets/screenshot-1.png" alt="One Dark theme rendering Python" loading="lazy">
+    <img src="assets/screenshot-1.png" alt="Code view rendering Python with syntax highlighting" loading="lazy">
+  </div>
+  <div class="shot">
+    <div class="win">
+      <div class="win-head"><i></i><i></i><i></i><span class="addr">file:///C:/samples/ — folder view</span></div>
+      <img src="assets/screenshot-2.png" alt="Folder view as a grid with language badges" loading="lazy">
+    </div>
   </div>
   <div class="shot">
     <div class="win">
       <div class="win-head"><i></i><i></i><i></i><span class="addr">compare: Showcase.java ↔ Showcase_v2.java</span></div>
-      <img src="assets/screenshot-2.png" alt="Compare mode diffing two Java files" loading="lazy">
+      <img src="assets/screenshot-3.png" alt="Compare mode diffing two Java files" loading="lazy">
     </div>
   </div>
   <div class="shot">
     <div class="win">
-      <div class="win-head"><i></i><i></i><i></i><span class="addr">file:///C:/samples/showcase.md</span></div>
-      <img src="assets/screenshot-3.png" alt="Markdown preview split view" loading="lazy">
+      <div class="win-head"><i></i><i></i><i></i><span class="addr">file:///C:/samples/diagrams.md</span></div>
+      <img src="assets/screenshot-4.png" alt="Markdown preview with rendered mermaid diagrams" loading="lazy">
     </div>
   </div>
   <div class="shot">
     <div class="win">
-      <div class="win-head"><i></i><i></i><i></i><span class="addr">file:///C:/samples/showcase.json — dracula</span></div>
-      <img src="assets/screenshot-5.png" alt="Dracula theme rendering JSON" loading="lazy">
+      <div class="win-head"><i></i><i></i><i></i><span class="addr">file:///C:/samples/flow.mmd</span></div>
+      <img src="assets/screenshot-5.png" alt="Mermaid file rendered as a diagram" loading="lazy">
     </div>
   </div>
 
@@ -231,9 +247,9 @@
   <div class="win" style="max-width:720px; margin:0 auto;">
     <div class="win-head"><i></i><i></i><i></i><span class="addr">bash — install</span></div>
     <div class="term-body">
-      <div><span class="g">$</span> <span class="cy">get</span> <span class="wh">code-previewer</span> <span class="dm"># chrome web store / edge add-ons</span> <span class="am">← coming soon</span></div>
+      <div><span class="g">$</span> <span class="cy">install</span> <span class="wh">code-previewer</span> <span class="dm"># from</span> <a href="https://chromewebstore.google.com/detail/code-previewer/jpmbjliabobhdapdnhpdhiehdfleddjg">Chrome</a> <span class="dm">or</span> <a href="https://microsoftedge.microsoft.com/addons/detail/code-previewer/kjelmbmjipkbncoclckieombhjgjpeei">Edge</a></div>
       <div><span class="g">$</span> <span class="cy">enable</span> <span class="wh">"Allow access to file URLs"</span> <span class="dm"># extension details — required</span></div>
-      <div><span class="g">$</span> <span class="cy">open</span> <span class="wh">file:///C:/projects/main.py</span></div>
+      <div><span class="g">$</span> <span class="cy">open</span> <span class="wh">file:///C:/projects/main.py</span> <span class="dm"># or a whole folder</span></div>
       <div><span class="g">✓ rendered.</span> <span class="dm">zero setup after that.</span></div>
     </div>
   </div>
