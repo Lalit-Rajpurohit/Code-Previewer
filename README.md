@@ -29,8 +29,6 @@
 
 <img src="assets/demo.gif" width="860" alt="Code Previewer demo — folder view, themes, markdown preview, mermaid diagrams and file compare">
 
-**▶ [Watch the 1-minute demo on YouTube](https://youtu.be/OqYiFYlhDIU)**
-
 </div>
 
 ---
